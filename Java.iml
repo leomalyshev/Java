@@ -23,6 +23,7 @@
       <excludeFolder url="file://$MODULE_DIR$/Geekbrains/Seminars/Second/Homework/out" />
       <excludeFolder url="file://$MODULE_DIR$/Geekbrains/Seminars/Sixth/homework/out" />
       <excludeFolder url="file://$MODULE_DIR$/Geekbrains/Seminars/Sixth/seminar/out" />
+      <excludeFolder url="file://$MODULE_DIR$/Geekbrains/Error/.idea" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
