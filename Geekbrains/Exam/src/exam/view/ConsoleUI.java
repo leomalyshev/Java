@@ -61,4 +61,10 @@ public class ConsoleUI implements View{
     public void printAnswer(String answer) {
         System.out.println(answer);
     }
+    public void save() throws IOException {
+        presenter.save();
+    }
+    public void load() throws IOException, ClassNotFoundException {
+        presenter.load();
+    }
 }

@@ -2,11 +2,12 @@ package exam.model.animal;
 
 import exam.model.registry.RegistryItem;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class PackAnimal implements Animal, RegistryItem {
+public abstract class PackAnimal implements Animal, RegistryItem, Serializable {
     private String name;
     private LocalDate age;
     private long Id;
@@ -58,9 +59,8 @@ public abstract class PackAnimal implements Animal, RegistryItem {
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("Id: " + this.Id + ", имя: " + getName() + ", дата рождения: " + getBirthday() + ", команды: " );
-        for (String cd: getCommands(this.Id)){
-            sb.append(cd + ", ");
-        }
+        String result = String.join(", ", commands);
+        sb.append(result);
         return sb.toString();
     }
 }

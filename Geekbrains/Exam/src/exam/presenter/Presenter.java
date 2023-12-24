@@ -5,6 +5,7 @@ import exam.model.registry.RegistryItem;
 import exam.model.service.Service;
 import exam.view.View;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.Scanner;
 
@@ -36,4 +37,13 @@ public class Presenter {
     public void setCommands(Long Id, String command) {
         service.setCommands(Id, command);
     }
+    public void save() throws IOException {
+        service.save();
+        System.out.println("Данные сохранены в файл");
+    }
+    public void load() throws IOException, ClassNotFoundException {
+        service.load();
+        System.out.println("Данные загружены из файла");
+    }
+
 }

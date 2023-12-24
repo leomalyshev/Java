@@ -4,12 +4,13 @@ import exam.model.animal.Animal;
 import exam.model.animal.AnimalComparatorByBirthday;
 import exam.model.animal.PackAnimal;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
 import java.util.function.Consumer;
 
-public class Registry implements Iterable<RegistryItem>{
+public class Registry implements Iterable<RegistryItem>, Serializable {
     private long animalId;
     private String name;
     private ArrayList<RegistryItem> animals;
