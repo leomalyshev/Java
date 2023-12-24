@@ -6,6 +6,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
 
+
 public class Shop<E extends ShopItem> implements Iterable<E>, Serializable {
     private List<DropRate<E>> goodsDropRate;
     private List<E> goods;
@@ -27,6 +28,14 @@ public class Shop<E extends ShopItem> implements Iterable<E>, Serializable {
         return goodsId;
     }
 
+    public void createGood(String name){
+        try {
+            ShopItem item = ShopItemFactory.createShopItem(ShopItem.class, "Заяц");
+            // Теперь у вас есть экземпляр ConcreteShopItem с именем "Заяц"
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
     public void addGoods(E good, double num) {
         goodsDropRate.add(new DropRate<>(good, num));
         goods.add(good);

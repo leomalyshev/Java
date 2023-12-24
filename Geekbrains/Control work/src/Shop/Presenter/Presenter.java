@@ -1,7 +1,7 @@
 package Shop.Presenter;
 
-import Shop.Model.Goods.Toy;
 import Shop.Model.Service.Service;
+import Shop.Model.Shop.ShopItem;
 import Shop.View.View;
 
 import java.util.Scanner;
@@ -18,7 +18,7 @@ public class Presenter {
         service.addGood(scanner);
     }
 
-    public Toy getRandomGood(){
+    public ShopItem getRandomGood(){
         return service.getRandomGood();
     }
 

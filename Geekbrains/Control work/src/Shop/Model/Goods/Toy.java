@@ -8,7 +8,12 @@ public class Toy implements ShopItem, Serializable {
     private String name;
     private long id;
 
+
     public Toy(String name) {
+        this.name = name;
+    }
+
+    public void setName(String name) {
         this.name = name;
     }
 
